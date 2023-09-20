@@ -2,7 +2,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class ArrayAssignment {
-<<<<<<< HEAD
     public static int[] createArray(int num){
         int[] array = new int[num];
         Random random = new Random();
@@ -12,7 +11,6 @@ public class ArrayAssignment {
         } 
         return array;
       }
-=======
     public static int minimumOfArray( int[] arr )
   {
     int minimum = arr[0];
@@ -36,5 +34,25 @@ public class ArrayAssignment {
     }
     return maximum;
   }
->>>>>>> main
+  public static int sumOfOdds(int[] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        if (i%2 == 1) {
+            sum += arr[i];  
+        }
+    }
+
+    return sum;
+}
+
+public static int sumOfEvens(int[] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        if (i%2 == 0) {
+            sum += arr[i];  
+        }
+    }
+  
+    return sum;
+}
 }
