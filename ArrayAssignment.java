@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class ArrayAssignment {
     public static int[] createArray(int num){
@@ -72,4 +73,39 @@ public static double[] difference_average(int[] array_input) {
   return result_array;
 
 }
+
+public static void userDisplay(int[] arrr) {
+  String temp = "asda";
+  Scanner s = new Scanner(System.in);
+
+
+  while (!temp.equalsIgnoreCase("exit")) {
+      System.out.println("Choose your option: \n1) Find min/max. \n2) Find average. \n3) Find the sum of elements with odd and even numbered indexes.");
+      System.out.print("Your option: ");
+      temp = s.nextLine();
+
+
+      if (temp.equalsIgnoreCase("1")) {
+        System.out.println(minimumOfArray(arrr));
+        System.out.println(maximumOfArray(arrr));
+
+      }   
+      else if (temp.equalsIgnoreCase("2")) {
+        System.out.println(Arrays.toString(difference_average(arrr)));
+      }
+      else if (temp.equalsIgnoreCase("3")) {
+          System.out.println("sum of evens: " + sumOfEvens(arrr));
+          System.out.println("sum of odds: " + sumOfOdds(arrr));
+      }
+
+      System.out.println();
+  }
+
+}
+
+public static void main(String[] args) {
+  userDisplay(createArray(5));
+}
+
+
 }
